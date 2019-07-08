@@ -1,0 +1,54 @@
+%YAML 1.1
+---
+actions:
+- utter_cheer_up
+- utter_did_that_help
+- utter_get_order
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_options
+entities:
+- PERSON
+- food
+forms:
+- action_order_food
+- action_book_seat
+intents:
+- inform
+- book_seat
+- greet
+- order_food
+- affirm
+- deny
+- goodbye
+- mood_great
+- mood_unhappy
+slots:
+  PERSON:
+    type: text
+  food:
+    type: text
+  requested_slot:
+    type: unfeaturized
+templates:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_get_order:
+  - text: What would you like to eat today?
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey {PERSON}
+  utter_happy:
+  - text: Great carry on!
+  utter_options:
+  - buttons:
+    - payload: /order_food
+      title: Order {food}
+    - payload: /book_seat
+      title: Book a seat
+    text: what would you like to do

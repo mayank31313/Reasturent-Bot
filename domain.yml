@@ -1,6 +1,7 @@
 %YAML 1.1
 ---
 actions:
+- utter_ask_food
 - utter_cheer_up
 - utter_did_that_help
 - utter_get_order
@@ -12,13 +13,13 @@ entities:
 - PERSON
 - food
 forms:
-- action_order_food
 - action_book_seat
+- action_order_food
 intents:
+- order_food
+- greet
 - inform
 - book_seat
-- greet
-- order_food
 - affirm
 - deny
 - goodbye
@@ -32,6 +33,8 @@ slots:
   requested_slot:
     type: unfeaturized
 templates:
+  utter_ask_food:
+  - text: What would you like to eat
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'

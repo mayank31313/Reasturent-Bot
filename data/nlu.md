@@ -34,10 +34,12 @@
 - Hey I am [Amit](PERSON)
 - Hey I am [Mayank](PERSON)
 - Hey I am [Amit](PERSON)
+- hey, I am [Mayank](PERSON)
 
 ## intent:inform
 - [Biryani](food)
 - [Biryani](food)
+- [Chole Bature](food)
 
 ## intent:mood_great
 - perfect
@@ -63,4 +65,8 @@
 
 ## intent:order_food
 - Order [Biryani](food)
+- I want to eat some [Deserts](food)
+- I want to eat [Biscuits](food)
+- /order_food
+- I would like some [Deserts](food)
 - /order_food

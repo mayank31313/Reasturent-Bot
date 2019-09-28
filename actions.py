@@ -12,7 +12,7 @@ class ActionOrderFood(FormAction):
     def required_slots(tracker):
         return ['food']
 
-    def run(self, dispatcher,tracker,domain):
+    def submit(self, dispatcher,tracker,domain):
         food = tracker.get_slot('food')
         dispatcher.utter_message("here are restaurants you can order %s from:" % str(food))
         return []
@@ -25,7 +25,7 @@ class ActionBookSeat(FormAction):
     def required_slots(tracker):
         return ['food']
 
-    def run(self, dispatcher,tracker,domain):
+    def submit(self, dispatcher,tracker,domain):
         food = tracker.get_slot('food')
         dispatcher.utter_message("here are restaurants serving %s near you:" % str(food))
         return []

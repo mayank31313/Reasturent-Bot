@@ -49,3 +49,18 @@
     - utter_options
 * book_seat
     - action_book_seat
+
+## interactive_story_1
+* greet{"PERSON": "Mayank"}
+    - slot{"PERSON": "Mayank"}
+    - utter_greet
+    - utter_get_order
+* order_food{"food": "Deserts"}
+    - slot{"food": "Deserts"}
+    - utter_options
+* order_food
+    - action_order_food
+    - form{"name": "action_order_food"}
+    - slot{"food": "Deserts"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
